@@ -10,11 +10,7 @@ from django.utils.functional import keep_lazy
 from django.utils.safestring import SafeText, mark_safe
 
 
-# backwards compatibility for python 2.X
-try:
-    unichr
-except NameError:
-    unichr = chr
+unichr = six.unichr
 
 
 HTML_ESCAPE_FMT = u'&#x%X;'
